@@ -149,11 +149,11 @@ const certModalIssuer = document.getElementById('cert-modal-issuer');
 const certModalImg = document.getElementById('cert-modal-img');
 
 const certificateData = {
-  java: { title: 'Java Programming', issuer: 'Mindluster', image: 'java_certificate.jpg' },
-  aws: { title: 'Solutions Architecture Job Simulation', issuer: 'Amazon AWS', image: 'aws_certificate.jpg' },
-  genai: { title: 'Introduction to Generative AI Studio', issuer: 'Google Cloud', image: 'genai_certificate.jpg' },
-  accenture: { title: 'Software Engineering Job Simulation', issuer: 'Accenture', image: 'accenture_certificate.jpg' },
-  python: { title: 'Basics of Python', issuer: 'Infosys Springboard', image: 'python_certificate.jpg' }
+  java: { title: 'Java Programming', issuer: 'Mindluster', image: 'assets/images/certificates/java_certificate.jpg' },
+  aws: { title: 'Solutions Architecture Job Simulation', issuer: 'Amazon AWS', image: 'assets/images/certificates/aws_certificate.jpg' },
+  genai: { title: 'Introduction to Generative AI Studio', issuer: 'Google Cloud', image: 'assets/images/certificates/genai_certificate.jpg' },
+  accenture: { title: 'Software Engineering Job Simulation', issuer: 'Accenture', image: 'assets/images/certificates/accenture_certificate.jpg' },
+  python: { title: 'Basics of Python', issuer: 'Infosys Springboard', image: 'assets/images/certificates/python_certificate.jpg' }
 };
 
 certCards.forEach((card) => {
@@ -213,7 +213,37 @@ if (emailBtn) {
 
 // DOWNLOAD CV
 function downloadMockCV() {
-  const cvContent = `ESWARAN S\nFull-Stack Web Developer\nCoimbatore, Tamil Nadu\n\nEmail: eswaraneswaran877@gmail.com\nPhone: +91 8220520093\nGitHub: https://github.com/Eswaran321\nLinkedIn: https://linkedin.com/in/eswaran-it`;
+  const cvContent = `ESWARAN S
+Full-Stack Web Developer
+Coimbatore, Tamil Nadu
+
+Email: eswaraneswaran877@gmail.com
+Phone: +91 8220520093
+GitHub: https://github.com/Eswaran321
+LinkedIn: https://linkedin.com/in/eswaran-it
+
+SKILLS:
+- Full Stack Development (React, Node.js)
+- Java, JavaScript, Android
+- SQL, Databases
+- Web Design & UI/UX
+
+PROJECTS:
+- Explainable AI Co-pilot (VSCode Extension)
+- Automated Bus Route Scheduler (SIH 2025)
+- Money Matters (Android App)
+- EV Revolution Solar System (SIH 2024)
+
+CERTIFICATIONS:
+- Java Programming (Mindluster)
+- AWS Solutions Architecture (Amazon AWS)
+- Generative AI Studio (Google Cloud)
+- Software Engineering Simulation (Accenture)
+- Python Basics (Infosys Springboard)
+
+EDUCATION:
+B.Tech Information Technology - Park College of Engineering and Technology (2022-2026)
+CGPA: 8.0`;
   const element = document.createElement('a');
   element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(cvContent));
   element.setAttribute('download', 'Eswaran_S_CV.txt');

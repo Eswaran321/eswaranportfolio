@@ -269,5 +269,28 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   });
 });
 
+// SCROLL REVEAL (FADE-UP ANIMATION)
+function initScrollReveal() {
+  const fadeElements = document.querySelectorAll('.fade-up');
+  
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        // Add active class to trigger the transition
+        entry.target.classList.add('active');
+        // Stop observing once it has animated in
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.1,
+    rootMargin: '0px 0px -40px 0px'
+  });
+  
+  fadeElements.forEach((el) => observer.observe(el));
+}
+
+document.addEventListener('DOMContentLoaded', initScrollReveal);
+
 console.log('%c🚀 Welcome to Eswaran\'s Portfolio!', 'color: #00D4FF; font-size: 16px; font-weight: bold;');
 console.log('%cFeel free to explore and get in touch!', 'color: #7B2FBE; font-size: 14px;');

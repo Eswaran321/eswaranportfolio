@@ -249,6 +249,58 @@ function initScrollReveal() {
   fadeElements.forEach((el) => observer.observe(el));
 }
 
+// PDF RESUME DOWNLOAD
+function downloadResumePDF() {
+  const { jsPDF } = window.jspdf;
+  const doc = new jsPDF({
+    orientation: 'p',
+    unit: 'mm',
+    format: 'a4'
+  });
+
+  const resumeContent = [
+    { text: 'ESWARAN S', fontSize: 18, fontStyle: 'bold', y: 20 },
+    { text: 'Full-Stack Web Developer', fontSize: 11, y: 30 },
+    { text: 'Coimbatore, Tamil Nadu', fontSize: 10, y: 36 },
+    
+    { text: 'CONTACT INFORMATION', fontSize: 12, fontStyle: 'bold', y: 50 },
+    { text: 'Email: eswaraneswaran877@gmail.com | Phone: +91 8220520093', fontSize: 9, y: 57 },
+    { text: 'GitHub: https://github.com/Eswaran321 | LinkedIn: https://linkedin.com/in/eswaran-it', fontSize: 9, y: 63 },
+    
+    { text: 'TECHNICAL SKILLS', fontSize: 12, fontStyle: 'bold', y: 75 },
+    { text: '• Programming: JavaScript, Java, Python\n• Frontend: React, HTML, CSS, Responsive Design\n• Backend: Node.js, Express, REST APIs\n• Databases: SQL, MongoDB\n• Tools: Git, Docker, AWS, Google Cloud', fontSize: 9, y: 82 },
+    
+    { text: 'PROJECTS', fontSize: 12, fontStyle: 'bold', y: 115 },
+    { text: '• Explainable AI Co-pilot (VSCode Extension) - AI-powered code explanations\n• Automated Bus Route Scheduler (SIH 2025) - Smart scheduling system\n• Money Matters - Android finance management app\n• EV Revolution Solar System (SIH 2024) - IoT renewable energy', fontSize: 9, y: 122 },
+    
+    { text: 'CERTIFICATIONS', fontSize: 12, fontStyle: 'bold', y: 152 },
+    { text: '✓ Java Programming (Mindluster)\n✓ AWS Solutions Architecture (Amazon AWS)\n✓ Generative AI Studio (Google Cloud)\n✓ Software Engineering Simulation (Accenture)\n✓ Python Basics (Infosys Springboard)', fontSize: 9, y: 159 },
+    
+    { text: 'EDUCATION', fontSize: 12, fontStyle: 'bold', y: 190 },
+    { text: 'B.Tech Information Technology\nPark College of Engineering and Technology (2022-2026)\nCGPA: 8.0', fontSize: 9, y: 197 }
+  ];
+
+  // Add content to PDF
+  resumeContent.forEach(item => {
+    const fontSize = item.fontSize || 10;
+    const isBold = item.fontStyle === 'bold';
+    
+    doc.setFontSize(fontSize);
+    if (isBold) {
+      doc.setFont(undefined, 'bold');
+    } else {
+      doc.setFont(undefined, 'normal');
+    }
+    
+    doc.text(item.text, 20, item.y, { maxWidth: 170, align: 'left' });
+  });
+
+  // Save the PDF
+  doc.save('Eswaran_S_Resume.pdf');
+}
+
+window.downloadResumePDF = downloadResumePDF;
+
 document.addEventListener('DOMContentLoaded', initScrollReveal);
 
 console.log('%c🚀 Welcome to Eswaran\'s Portfolio!', 'color: #00D4FF; font-size: 16px; font-weight: bold;');

@@ -24,6 +24,9 @@
 
   <!-- Stylesheet -->
   <link rel="stylesheet" href="css/style.css?v=1.1">
+
+  <!-- jsPDF Library for PDF Generation -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 </head>
 
 <body>
@@ -115,7 +118,7 @@
         <p class="hero-tagline">Building real things. Solving real problems. Based in Coimbatore.</p>
         <div class="cta-row">
           <a href="#projects" class="btn btn-primary">View My Work</a>
-          <a href="assets/resume/Eswaran_S_Resume.pdf" download class="btn btn-secondary">Download Resume</a>
+          <button onclick="downloadResumePDF()" class="btn btn-secondary">Download Resume</button>
         </div>
         <div class="hero-socials">
           <a href="https://github.com/Eswaran321" target="_blank" rel="noopener noreferrer" class="social-icon"

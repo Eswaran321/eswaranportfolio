@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Eswaran S">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00D4FF" />
+      <stop offset="100%" stop-color="#7B2FBE" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="400" rx="200" fill="url(#bg)" />
+  <circle cx="200" cy="160" r="90" fill="#0f172a" opacity="0.9" />
+  <circle cx="200" cy="150" r="72" fill="#f8fafc" />
+  <path d="M110 330c18-62 72-95 90-95s72 33 90 95" fill="#0f172a" opacity="0.9" />
+  <text x="200" y="365" text-anchor="middle" font-family="Arial, sans-serif" font-size="48" font-weight="700" fill="#f8fafc">ES</text>
+</svg>

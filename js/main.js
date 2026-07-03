@@ -212,48 +212,7 @@ if (emailBtn) {
 }
 
 // DOWNLOAD CV
-function downloadMockCV() {
-  const cvContent = `ESWARAN S
-Full-Stack Web Developer
-Coimbatore, Tamil Nadu
 
-Email: eswaraneswaran877@gmail.com
-Phone: +91 8220520093
-GitHub: https://github.com/Eswaran321
-LinkedIn: https://linkedin.com/in/eswaran-it
-
-SKILLS:
-- Full Stack Development (React, Node.js)
-- Java, JavaScript, Android
-- SQL, Databases
-- Web Design & UI/UX
-
-PROJECTS:
-- Explainable AI Co-pilot (VSCode Extension)
-- Automated Bus Route Scheduler (SIH 2025)
-- Money Matters (Android App)
-- EV Revolution Solar System (SIH 2024)
-
-CERTIFICATIONS:
-- Java Programming (Mindluster)
-- AWS Solutions Architecture (Amazon AWS)
-- Generative AI Studio (Google Cloud)
-- Software Engineering Simulation (Accenture)
-- Python Basics (Infosys Springboard)
-
-EDUCATION:
-B.Tech Information Technology - Park College of Engineering and Technology (2022-2026)
-CGPA: 8.0`;
-  const element = document.createElement('a');
-  element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(cvContent));
-  element.setAttribute('download', 'Eswaran_S_CV.txt');
-  element.style.display = 'none';
-  document.body.appendChild(element);
-  element.click();
-  document.body.removeChild(element);
-}
-
-window.downloadMockCV = downloadMockCV;
 
 // SMOOTH SCROLL
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
